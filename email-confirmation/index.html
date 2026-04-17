@@ -4,23 +4,33 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Email Confirmation - SmartHub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="topbar reveal-up">
+    <a class="brand" href="../">SmartHub Diagnostics</a>
+    <p class="topbar-note">Account flow completed</p>
+  </header>
+
   <main class="wrap">
-    <section class="card">
-      <span class="badge">Email Confirmation</span>
+    <section class="hero reveal-up delay-1">
+      <p class="eyebrow">Email Confirmation</p>
       <h1>Email confirmed successfully</h1>
-      <p>
-        Your confirmation link worked. Return to the SmartHub Windows app and sign in with your account.
+      <p class="lead">
+        Your confirmation link is valid. Return to the SmartHub Windows app and sign in with your account.
       </p>
 
       <div class="actions">
-        <a class="btn primary" href="https://github.com/23sc4122ms-sys/SmartHub/releases/latest">Download Windows App</a>
-        <a class="btn secondary" href="../">Back to Website</a>
+        <a class="btn primary" href="../">Back to Website</a>
       </div>
-
-      <p class="kv">Confirmation URL: <code>https://YOUR-PAGES-DOMAIN/email-confirmation/</code></p>
     </section>
   </main>
 </body>

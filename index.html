@@ -3,26 +3,84 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SmartHub Website</title>
+  <title>SmartHub Diagnostics | Download Windows App</title>
+  <meta
+    name="description"
+    content="Download SmartHub Diagnostics for Windows. Run Android device checks, collect evidence, and keep repair diagnostics organized."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="topbar reveal-up">
+    <a class="brand" href="/">SmartHub Diagnostics</a>
+    <p class="topbar-note">Windows-first repair diagnostics for Android service workflows.</p>
+  </header>
+
   <main class="wrap">
-    <section class="card">
-      <span class="badge">SmartHub Portal</span>
-      <h1>Download SmartHub Windows App</h1>
-      <p>
-        This is a pure static HTML website (no Laravel). Registration and sign-in
-        are handled inside the SmartHub Windows app.
+    <section class="hero reveal-up delay-1">
+      <p class="eyebrow">Windows Application</p>
+      <h1>Diagnose faster, keep reports clean, and guide technicians with confidence.</h1>
+      <p class="lead">
+        SmartHub Diagnostics provides connection checks, USB evidence collection, and AI-assisted recommendations for repair benches.
+        Account registration and sign-in are handled inside the desktop app.
       </p>
 
       <div class="actions">
-        <a class="btn primary" href="https://github.com/23sc4122ms-sys/SmartHub/releases/latest">Download Latest Release</a>
-        <a class="btn secondary" href="./email-confirmation/">Email Confirmation Page</a>
+        <button id="downloadBtn" class="btn primary" type="button">Download for Windows</button>
+        <a class="btn ghost" href="#features">View Features</a>
       </div>
 
-      <p class="kv">Website URL: <code>https://YOUR-PAGES-DOMAIN/</code></p>
+      <p id="downloadStatus" class="status">Preparing release information...</p>
+    </section>
+
+    <section class="metrics reveal-up delay-2" aria-label="Download and release metrics">
+      <article class="metric-card">
+        <p class="metric-label">Latest Version</p>
+        <p id="metricVersion" class="metric-value">Checking...</p>
+      </article>
+      <article class="metric-card">
+        <p class="metric-label">GitHub Downloads</p>
+        <p id="metricGithubDownloads" class="metric-value">--</p>
+      </article>
+      <article class="metric-card">
+        <p class="metric-label">Site Download Clicks</p>
+        <p id="metricTrackedClicks" class="metric-value">--</p>
+      </article>
+      <article class="metric-card">
+        <p class="metric-label">Last Release Date</p>
+        <p id="metricPublishedAt" class="metric-value">Checking...</p>
+      </article>
+    </section>
+
+    <section id="features" class="features reveal-up delay-3" aria-label="Product highlights">
+      <article class="feature-card">
+        <h2>Connection Intelligence</h2>
+        <p>Detect unstable USB states quickly and surface clear host-vs-device evidence for technicians.</p>
+      </article>
+      <article class="feature-card">
+        <h2>Guided Diagnosis</h2>
+        <p>Generate readable recommendations based on collected diagnostics, not guesswork.</p>
+      </article>
+      <article class="feature-card">
+        <h2>History Ready</h2>
+        <p>Keep local and optional cloud-backed run history to compare recurring faults over time.</p>
+      </article>
+    </section>
+
+    <section class="footer-note reveal-up delay-4">
+      <p class="kv">Website URL: <code id="siteUrl">Loading...</code></p>
+      <p class="mini">This site does not expose email confirmation in the main UI. The confirmation route remains available for auth redirects only.</p>
     </section>
   </main>
+
+  <script src="./app.js" defer></script>
 </body>
 </html>

@@ -1,41 +1,44 @@
 # SmartHub Static Website (HTML only)
 
-This folder is a pure static website. No Laravel, no build step required.
+This folder is a pure static website. No Laravel and no build step required.
 
 ## Files
 
-- `index.html`
-- `styles.css`
-- `email-confirmation/index.html`
+- `index.html` (professional landing page)
+- `styles.css` (responsive UI styling)
+- `app.js` (download metrics + redirect logic)
+- `email-confirmation/index.html` (kept for auth redirect route)
 - `.nojekyll`
 
-## Upload to a New GitHub Repository
+## Download Tracking + Redirect
 
-1. Create a new empty repository on GitHub (for example: `smarthub-website-html`).
-2. Run these commands from this folder:
+When users click **Download for Windows**:
 
-```powershell
-cd D:\SmartHubv14\SmartHubv5\website-html
-git init
-git add .
-git commit -m "Initial static SmartHub website"
-git branch -M main
-git remote add origin https://github.com/<YOUR_USERNAME>/<NEW_REPO>.git
-git push -u origin main
-```
+1. The site increments a public counter using CountAPI.
+2. It resolves the latest GitHub release.
+3. It redirects users to the newest Windows installer asset (fallback: release page).
+
+Configured in `app.js`:
+
+- `RELEASE_OWNER`
+- `RELEASE_REPO`
+- `TRACKING_NAMESPACE`
+- `TRACKING_KEY`
 
 ## Deploy to Cloudflare Pages
 
 - Project type: Pages
-- Connect your new GitHub repository
+- Connect repository: `23sc4122ms-sys/SmartHub1`
 - Production branch: `main`
 - Build command: `exit 0`
 - Build output directory: `.`
 
 ## Supabase Redirect URL
 
-After deployment, set your redirect URL to:
+Email confirmation is intentionally not shown on the homepage UI, but the route is available for auth redirects:
 
 - `https://<YOUR_DOMAIN>/email-confirmation/`
 
-And update your local SmartHub config file (`supabase.local.json`) with the same URL.
+Set the same URL in your SmartHub local config (`supabase.local.json`) for:
+
+- `SMARTHUB_SUPABASE_EMAIL_REDIRECT_URL`
