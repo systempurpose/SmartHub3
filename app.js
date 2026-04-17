@@ -1,10 +1,10 @@
-const RELEASE_OWNER = '23sc4122ms-sys';
-const RELEASE_REPO = 'SmartHub';
+const RELEASE_OWNER = 'systempurpose';
+const RELEASE_REPO = 'SmartHub3';
 
 const RELEASE_FALLBACK_URL = `https://github.com/${RELEASE_OWNER}/${RELEASE_REPO}/releases/latest`;
 const RELEASE_API_URL = `https://api.github.com/repos/${RELEASE_OWNER}/${RELEASE_REPO}/releases/latest`;
 
-const TRACKING_NAMESPACE = 'smarthub-diagnostics';
+const TRACKING_NAMESPACE = 'smarthub3-portal';
 const TRACKING_KEY = 'windows-download-clicks';
 
 let resolvedDownloadUrl = RELEASE_FALLBACK_URL;

@@ -7,30 +7,43 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="../styles.css" />
 </head>
 <body>
-  <div class="ambient" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-c" aria-hidden="true"></div>
 
-  <header class="topbar reveal-up">
-    <a class="brand" href="../">SmartHub Diagnostics</a>
-    <p class="topbar-note">Account flow completed</p>
-  </header>
+  <main class="stage">
+    <section class="panel reveal-up">
+      <header class="nav-bar">
+        <a class="logo" href="../">Smart<span>Hub</span> Portal</a>
+      </header>
 
-  <main class="wrap">
-    <section class="hero reveal-up delay-1">
-      <p class="eyebrow">Email Confirmation</p>
-      <h1>Email confirmed successfully</h1>
-      <p class="lead">
-        Your confirmation link is valid. Return to the SmartHub Windows app and sign in with your account.
-      </p>
+      <section class="hero-grid" style="grid-template-columns:1fr; margin-top: 16px;">
+        <article class="hero-copy reveal-up delay-1">
+          <p class="status" style="margin-top:0;">Account flow completed</p>
 
-      <div class="actions">
-        <a class="btn primary" href="../">Back to Website</a>
-      </div>
+          <h1>Account <span>Verified</span></h1>
+          <h2>your email was confirmed successfully</h2>
+
+          <p>
+            Return to the SmartHub Windows app and continue signing in using your account.
+            This route is kept for authentication redirects only.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="../">Back to Website</a>
+          </div>
+        </article>
+      </section>
+
+      <footer class="foot">
+        <p>Email confirmation endpoint is active and working.</p>
+      </footer>
     </section>
   </main>
 </body>

@@ -3,81 +3,106 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>SmartHub Diagnostics | Download Windows App</title>
+  <title>SmartHub Portal | Download Windows App</title>
   <meta
     name="description"
-    content="Download SmartHub Diagnostics for Windows. Run Android device checks, collect evidence, and keep repair diagnostics organized."
+    content="SmartHub Portal for Windows diagnostics. Download the app, track releases, and launch technician-friendly repair workflows."
   />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
     rel="stylesheet"
   />
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
-  <div class="ambient" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-c" aria-hidden="true"></div>
 
-  <header class="topbar reveal-up">
-    <a class="brand" href="/">SmartHub Diagnostics</a>
-    <p class="topbar-note">Windows-first repair diagnostics for Android service workflows.</p>
-  </header>
+  <main class="stage" id="home">
+    <section class="panel reveal-up">
+      <header class="nav-bar">
+        <a class="logo" href="#home">Smart<span>Hub</span> Portal</a>
 
-  <main class="wrap">
-    <section class="hero reveal-up delay-1">
-      <p class="eyebrow">Windows Application</p>
-      <h1>Diagnose faster, keep reports clean, and guide technicians with confidence.</h1>
-      <p class="lead">
-        SmartHub Diagnostics provides connection checks, USB evidence collection, and AI-assisted recommendations for repair benches.
-        Account registration and sign-in are handled inside the desktop app.
-      </p>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
 
-      <div class="actions">
-        <button id="downloadBtn" class="btn primary" type="button">Download for Windows</button>
-        <a class="btn ghost" href="#features">View Features</a>
-      </div>
+        <div class="nav-icons" aria-hidden="true">
+          <span class="dot"></span>
+          <span class="grid-icon"></span>
+        </div>
+      </header>
 
-      <p id="downloadStatus" class="status">Preparing release information...</p>
-    </section>
+      <section class="hero-grid" id="about">
+        <article class="hero-copy reveal-up delay-1">
+          <div class="search-line" aria-hidden="true">
+            <span class="search-icon"></span>
+            <span class="search-rule"></span>
+          </div>
 
-    <section class="metrics reveal-up delay-2" aria-label="Download and release metrics">
-      <article class="metric-card">
-        <p class="metric-label">Latest Version</p>
-        <p id="metricVersion" class="metric-value">Checking...</p>
-      </article>
-      <article class="metric-card">
-        <p class="metric-label">GitHub Downloads</p>
-        <p id="metricGithubDownloads" class="metric-value">--</p>
-      </article>
-      <article class="metric-card">
-        <p class="metric-label">Site Download Clicks</p>
-        <p id="metricTrackedClicks" class="metric-value">--</p>
-      </article>
-      <article class="metric-card">
-        <p class="metric-label">Last Release Date</p>
-        <p id="metricPublishedAt" class="metric-value">Checking...</p>
-      </article>
-    </section>
+          <h1>Smart<span>Hub</span></h1>
+          <h2>always keeps your diagnostics fast, clear, and reliable</h2>
+          <p>
+            SmartHub Diagnostics helps technicians run connection checks, capture evidence,
+            and resolve Android service issues with confidence.
+          </p>
 
-    <section id="features" class="features reveal-up delay-3" aria-label="Product highlights">
-      <article class="feature-card">
-        <h2>Connection Intelligence</h2>
-        <p>Detect unstable USB states quickly and surface clear host-vs-device evidence for technicians.</p>
-      </article>
-      <article class="feature-card">
-        <h2>Guided Diagnosis</h2>
-        <p>Generate readable recommendations based on collected diagnostics, not guesswork.</p>
-      </article>
-      <article class="feature-card">
-        <h2>History Ready</h2>
-        <p>Keep local and optional cloud-backed run history to compare recurring faults over time.</p>
-      </article>
-    </section>
+          <div class="cta-row">
+            <button id="downloadBtn" class="btn primary" type="button">Download Windows App</button>
+            <a class="btn secondary" href="#contact">Watch Overview</a>
+          </div>
 
-    <section class="footer-note reveal-up delay-4">
-      <p class="kv">Website URL: <code id="siteUrl">Loading...</code></p>
-      <p class="mini">This site does not expose email confirmation in the main UI. The confirmation route remains available for auth redirects only.</p>
+          <p id="downloadStatus" class="status">Preparing release information...</p>
+
+          <div class="mini-metrics" aria-label="Release metrics">
+            <div class="metric-pill">
+              <span>Version</span>
+              <strong id="metricVersion">Checking...</strong>
+            </div>
+            <div class="metric-pill">
+              <span>GitHub Downloads</span>
+              <strong id="metricGithubDownloads">--</strong>
+            </div>
+            <div class="metric-pill">
+              <span>Tracked Clicks</span>
+              <strong id="metricTrackedClicks">--</strong>
+            </div>
+          </div>
+        </article>
+
+        <article class="hero-visual reveal-up delay-2" aria-label="SmartHub visual preview">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="orbit orbit-c"></div>
+
+          <div class="preview-frame">
+            <div class="preview-top-accent"></div>
+            <div class="preview-card">
+              <p class="preview-label">Live SmartHub Snapshot</p>
+              <h3>Repair Bench Session</h3>
+
+              <ul>
+                <li><span>Connection Check</span><b>Stable</b></li>
+                <li><span>USB Evidence</span><b>Healthy</b></li>
+                <li><span>AI Guidance</span><b>Ready</b></li>
+              </ul>
+
+              <div class="wave"></div>
+              <p class="published">Last release: <strong id="metricPublishedAt">Checking...</strong></p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <footer class="foot" id="contact">
+        <p>Windows download opens the latest SmartHub app output asset automatically.</p>
+        <p class="site-url">Website URL: <code id="siteUrl">Loading...</code></p>
+      </footer>
     </section>
   </main>
 

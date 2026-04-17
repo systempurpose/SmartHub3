@@ -28,7 +28,7 @@ Configured in `app.js`:
 ## Deploy to Cloudflare Pages
 
 - Project type: Pages
-- Connect repository: `23sc4122ms-sys/SmartHub1`
+- Connect repository: `systempurpose/SmartHub3`
 - Production branch: `main`
 - Build command: `exit 0`
 - Build output directory: `.`
